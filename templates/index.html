@@ -1,0 +1,23 @@
+{% load i18n %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Сокращение ссылок</title>
+</head>
+<body>
+    <form action="urlIsAdded.html" method="post">
+      {% csrf_token %}
+        <p>Type your address here:</p>
+      <table>
+        {{ form }}
+        <tr>
+          <td colspan="2">
+            <input type="text" name="long_url"/>
+              <input type="submit" name="make it short button" value="make it short!">
+          </td>
+        </tr>
+      </table>
+    </form>
+</body>
+</html>
